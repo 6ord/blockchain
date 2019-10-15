@@ -64,9 +64,14 @@ class Member:
         
 
     def mine(self):
-        #will have while loop
-        #stop if first two char [0:2] = 00
-        print('mining under construction')
+        while solved == False:
+	h = hashlib.sha256((str(random.randint(1,1000))+'fingers crossed').encode('utf-8')).hexdigest()
+	print(h)
+	if(h[0:2]=='00'):
+		solved = True
+	else:
+		pass
+
 
 class Network:
     
